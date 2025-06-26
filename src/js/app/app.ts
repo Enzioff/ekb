@@ -4,6 +4,7 @@ import Mask from "./mask";
 import Header from "./header";
 import Faq from "./faq";
 import Tabs from "./tabs";
+import DirectionMap from "./directionMap";
 
 class App {
     constructor() {
@@ -17,6 +18,15 @@ class App {
         this.createHeader()
         this.createFaqBlock()
         this.createTabs()
+        this.createDirectionMap()
+    }
+    
+    createDirectionMap = () => {
+        const directionMap = document.querySelector('[data-map-container]');
+        
+        if (!directionMap) return
+        
+        new DirectionMap(directionMap);
     }
     
     createFaqBlock = () => {
