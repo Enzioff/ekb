@@ -153,6 +153,17 @@
     }
   }
 
+  &--attraction-block {
+    background-image: url("../assets/images/attraction-block-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include r($mobile) {
+      background-image: none;
+    }
+  }
+
   &--eat {
     background-image: url("../assets/images/decor/bg-4.svg");
     background-size: cover;

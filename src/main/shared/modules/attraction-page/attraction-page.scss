@@ -1,0 +1,48 @@
+.attraction-page {
+  display: flex;
+  flex-direction: column;
+
+  &__intro {
+    display: grid;
+    grid-template-columns: 1fr 270px;
+    align-items: start;
+    gap: 100px;
+    margin-bottom: 100px;
+
+    @include r($mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include r($mobile) {
+      gap: 20px;
+    }
+  }
+
+  &__title {
+    @include text(var(--black), 36px, 500);
+
+    @include r($mobile) {
+      @include text(var(--black), 33px, 500);
+    }
+  }
+
+  &__place {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    svg {
+      color: var(--purple-dark);
+    }
+  }
+}
