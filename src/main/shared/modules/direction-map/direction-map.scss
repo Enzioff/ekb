@@ -7,6 +7,18 @@
     gap: 25px;
   }
 
+  &--single {
+    .direction-map__wrapper {
+      display: flex;
+    }
+    .direction-map__map {
+      width: 100%;
+    }
+    .direction-map__list {
+      display: none;
+    }
+  }
+
   &__text {
     @include text(var(--black), 20px, 500);
 
