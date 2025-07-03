@@ -47,6 +47,12 @@ class DirectionMap {
         this.listItems.forEach((item, idx) => {
             this.map.geoObjects.add(this.geoObjectTemplate(item, idx))
         })
+        if (this.listItems.length > 1) {
+            const bounds = ymaps.geoQuery(this.map.geoObjects).getBounds();
+            this.map.setBounds(bounds, {checkZoomRange: true, zoomMargin: 30});
+        } else if (this.listItems.length === 1) {
+            this.map.setCenter(this.map.geoObjects[0].geometry.getCoordinates(), 13);
+        }
     }
     
     geoObjectTemplate(item, idx) {
