@@ -5,17 +5,32 @@
 <body class="theme-light">
 <%= htmlWebpackPlugin.options.widgets.header %>
 <main class="main">
-    <section class="section section--intro" style="--background: url('../assets/images/main-bg.jpg')">
-        <div class="container">
-            <div class="intro">
-                <h1 class="title title--light">
-                    Екатеринбург <br>
-                    город контрастов
-                </h1>
-                <a href="#" class="button">Подробнее</a>
+    <div class="slider" data-slider="index">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <section class="section section--intro" style="--background: url('../assets/images/main-bg.jpg')">
+                        <div class="container">
+                            <div class="intro">
+                                <h1 class="title title--light">
+                                    Екатеринбург <br>
+                                    город контрастов
+                                </h1>
+                                <a href="#" class="button">Подробнее</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="swiper-slide">
+                    <section class="section section--intro" style="--background: url('../assets/images/main-bg.jpg')">
+                        <video class="video-block" preload="auto" loop autoplay muted playsinline>
+                            <source src="https://300.екатеринбург.рф/local/templates/diez-ekb/assets/video/intro-new-mp4.mp4" type="video/mp4;">
+                        </video>
+                    </section>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
     <%= htmlWebpackPlugin.options.widgets.blockCards %>
     <%= htmlWebpackPlugin.options.widgets.blockPoster %>
     <%= htmlWebpackPlugin.options.widgets.blockPromo %>
