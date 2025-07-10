@@ -8,6 +8,22 @@
   position: relative;
   overflow: hidden;
 
+  &--error {
+    height: 100vh;
+    max-height: 900px;
+    background-image: var(--background);
+    background-position: center;
+    background-color: var(--grey-bg);
+
+    @include r($mobile) {
+      max-height: 780px;
+    }
+
+    .container {
+      height: 100%;
+    }
+  }
+
   &--intro {
     position: relative;
     display: flex;

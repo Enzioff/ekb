@@ -1,0 +1,32 @@
+.error-page {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  height: 100%;
+
+  @include r($mobile) {
+    flex-direction: column;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    @include r($mobile) {
+      align-items: center;
+    }
+  }
+
+  &__title {
+    @include text(var(--black), 32px, 700, uppercase, 140%);
+
+    @include r($mobile) {
+      @include text(var(--black), 22px, 700, uppercase, 140%);
+      text-align: center;
+    }
+  }
+}

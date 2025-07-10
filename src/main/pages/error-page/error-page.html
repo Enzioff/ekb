@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<%= htmlWebpackPlugin.options.widgets.head %>
+
+<body class="theme-light">
+<%= htmlWebpackPlugin.options.widgets.header %>
+<main class="main">
+    <section class="section section--error" style="--background: url('../assets/images/error-page-bg.svg')">
+        <div class="container">
+            <div class="error-page">
+                <picture class="error-page__picture">
+                    <img src="./assets/images/404.svg" alt="">
+                </picture>
+                <div class="error-page__info">
+                    <h1 class="error-page__title">
+                        К сожалению,<br>
+                        страница не существует.
+                    </h1>
+                    <a href="#" class="button">На главную</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<%= htmlWebpackPlugin.options.widgets.footer %>
+<%= htmlWebpackPlugin.options.widgets.hidden %>
+<%= htmlWebpackPlugin.options.widgets.temp %>
+</body>
+</html>
