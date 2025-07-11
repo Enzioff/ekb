@@ -65,6 +65,9 @@ class Slider {
         case 'thumbs':
             this.initThumbsSlider();
             break;
+        case 'timeline':
+            this.initTimelineSlider();
+            break;
         }
     }
     
@@ -223,6 +226,22 @@ class Slider {
             spaceBetween: 10,
             thumbs: {
                 swiper: thumbSlider,
+            },
+        })
+    }
+    
+    initTimelineSlider() {
+        const slider = this.el.querySelector('.swiper');
+        new Swiper(slider, {
+            modules: [Navigation],
+            slidesPerView: "auto",
+            spaceBetween: 0,
+            watchSlidesProgress: true,
+            freeMode: true,
+            navigation: {
+                prevEl: this.buttonPrev,
+                nextEl: this.buttonNext,
+                disabledClass: 'slider__btn--disabled'
             },
         })
     }

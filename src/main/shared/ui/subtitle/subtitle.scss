@@ -1,4 +1,10 @@
 .subtitle {
   max-width: 610px;
-  @include text(var(--white), 24px, 300, none)
+  @include text(var(--white), 24px, 300, none);
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 12;
+  line-clamp: 12;
+  -webkit-box-orient: vertical;
 }
