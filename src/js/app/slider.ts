@@ -74,11 +74,15 @@ class Slider {
     initIndexSlider() {
         const slider = this.el.querySelector('.swiper');
         new Swiper(slider, {
-            modules: [Autoplay],
+            modules: [Autoplay, Pagination],
             slidesPerView: 1,
             spaceBetween: 0,
             loop: true,
             autoplay: {delay: 15000},
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            }
         })
     }
     
