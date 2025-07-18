@@ -19,6 +19,7 @@ class App {
         this.createFaqBlock()
         this.createTabs()
         this.createDirectionMap()
+        this.createShowMoreText()
     }
     
     createDirectionMap = () => {
@@ -83,6 +84,29 @@ class App {
         if (!header) return;
         
         new Header(header);
+    }
+    
+    createShowMoreText = () => {
+        const blocksInfo = document.querySelectorAll('.block-info');
+        if (!blocksInfo) return;
+        blocksInfo.forEach(block => {
+            const showMoreBtn = block.querySelector('.block-info__more');
+            
+            if (showMoreBtn) {
+                const showMoreBtnText = showMoreBtn.querySelector('span');
+                const showMoreBtnIcon = showMoreBtn.querySelector('svg');
+                showMoreBtn.addEventListener('click', () => {
+                    block.classList.toggle('show');
+                    if (block.classList.contains('show')) {
+                        showMoreBtnText.textContent = 'Свернуть'
+                        showMoreBtnIcon.style.transform = 'rotate(180deg)'
+                    } else {
+                        showMoreBtnText.textContent = 'Развернуть'
+                        showMoreBtnIcon.style.transform = 'rotate(0deg)'
+                    }
+                })
+            }
+        })
     }
 }
 

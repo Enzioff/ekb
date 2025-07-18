@@ -9,6 +9,13 @@
     gap: 30px;
   }
 
+  &.show {
+    .block-info__text {
+      -webkit-line-clamp: none;
+      line-clamp: none;
+    }
+  }
+
   &--history {
     &:not(:last-of-type) {
       margin-bottom: 50px;
