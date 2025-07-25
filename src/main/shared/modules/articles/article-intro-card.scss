@@ -116,14 +116,12 @@
     background-repeat: no-repeat;
     background-position: center right;
     background-size: cover;
-    clip-path: polygon(0 54px, 100% 0, 100% 100%, 0% 100%);
     overflow: hidden;
 
     @include r($mobile) {
       gap: 12px;
       padding: 56px 20px 21px 30px;
       min-height: 160px;
-      clip-path: polygon(0 40px, 100% 0, 100% 100%, 0% 100%);
     }
   }
 

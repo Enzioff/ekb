@@ -11,11 +11,7 @@
 
   p {
     a {
-      color: var(--blue);
-
-      &:hover {
-        text-decoration: underline;
-      }
+      text-decoration: underline;
     }
   }
 
