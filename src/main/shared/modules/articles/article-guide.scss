@@ -94,6 +94,10 @@
     &--blue {
       --accent-color: var(--blue);
     }
+
+    &--yellow {
+      --accent-color: var(--yellow-new);
+    }
   }
 
   &__wrapper {

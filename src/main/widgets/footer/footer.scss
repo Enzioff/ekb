@@ -82,6 +82,10 @@
           @include text(var(--grey), 12px, 300, none, 22px);
         }
       }
+
+      &--row {
+        flex-direction: row;
+      }
     }
 
     &--long {
@@ -163,6 +167,20 @@
       @include r($mobile) {
         @include text(var(--grey), 12px, 300, none, 22px);
       }
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+
+    img {
+      display: block;
+      width: 24px;
+      height: 24px;
     }
   }
 }
