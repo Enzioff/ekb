@@ -24,6 +24,7 @@
   &--auto {
     .swiper-slide {
       width: auto !important;
+      height: auto;
 
       @include r($mobile) {
         width: 100% !important;
@@ -135,6 +136,7 @@
   }
 
   svg {
+    margin-left: 3px;
     display: flex;
     width: 15px;
     height: 15px;
@@ -146,6 +148,7 @@
   }
 
   &--prev {
+    margin-left: -3px;
     transform: rotate(180deg);
   }
 }

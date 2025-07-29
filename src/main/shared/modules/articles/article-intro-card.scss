@@ -57,6 +57,21 @@
     --card-color-rgb: var(--blue-rgb);
   }
 
+  &--blue-light {
+    --card-color: var(--blue-new);
+    --card-color-rgb: var(--blue-new-rgb);
+  }
+
+  &--green-light {
+    --card-color: var(--green-accent);
+    --card-color-rgb: var(--green-accent-rgb);
+  }
+
+  &--yellow-light {
+    --card-color: var(--yellow-new);
+    --card-color-rgb: var(--yellow-new-rgb);
+  }
+
   &__tags {
     position: absolute;
     top: 0;
@@ -118,10 +133,13 @@
     background-size: cover;
     overflow: hidden;
 
+    clip-path: polygon(-10px 54px, 110% 0, 110% 110%, 0% 110%);
+
     @include r($mobile) {
       gap: 12px;
       padding: 56px 20px 21px 30px;
       min-height: 160px;
+      clip-path: polygon(-10px 40px, 110% 0, 110% 110%, 0% 110%);
     }
   }
 

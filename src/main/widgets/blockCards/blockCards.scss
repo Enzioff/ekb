@@ -1,29 +1,13 @@
 .intro-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px 30px;
+  gap: 30px;
 
   @include r($mobile) {
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin-bottom: 35px;
-  }
-
-  @include rmin($mobile + 1) {
-    $offset: 20px;
-
-    @for $i from 0 through 100 {
-      $pos: $i * 3;
-
-      & > .article-intro-card:nth-child(#{$pos + 2}) {
-        transform: translateY($offset);
-      }
-
-      & > .article-intro-card:nth-child(#{$pos + 3}) {
-        transform: translateY($offset * 2);
-      }
-    }
   }
 
   .article-intro-card {

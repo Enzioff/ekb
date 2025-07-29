@@ -8,7 +8,7 @@
 
   @include text(var(--white));
 
-  background-color: var(--blue);
+  background-color: var(--blue-light);
   border-radius: $r-30;
   cursor: pointer;
 
@@ -33,8 +33,9 @@
     color: var(--blue);
 
     svg {
+      margin-left: 1px;
       width: 8px;
-      height: 7px;
+      height: 8px;
       transform: rotate(-90deg);
     }
   }

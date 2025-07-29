@@ -23,7 +23,7 @@
 
   &--filter {
     padding: 10px 30px;
-    @include text(rgba(var(--text-color), .8), 14px);
+    @include text(rgba(var(--blue-light-rgb), .8), 14px);
 
     @include r($mobile) {
       padding: 10px 14px;
@@ -31,7 +31,7 @@
   }
 
   &.active {
-    background: rgba(var(--text-color), 1);
+    background: rgba(var(--blue-light-rgb), 1);
     color: var(--bg-color);
   }
 
