@@ -164,6 +164,10 @@
         font-size: 24px;
       }
     }
+
+    .article-news__info {
+      height: auto;
+    }
   }
 
   &--direction {
@@ -213,8 +217,8 @@
   }
 
   &--green {
-    --current-color: var(--green-light);
-    --current-color-rgb: var(--green-light-rgb);
+    --current-color: var(--green-accent);
+    --current-color-rgb: var(--green-accent-rgb);
   }
 
   &__intro {
