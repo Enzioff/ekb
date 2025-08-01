@@ -4,6 +4,7 @@ class DirectionMap {
     listItems;
     objectManager;
     geoObjects;
+    clusterer;
     
     constructor(container) {
         this.container = container;
@@ -30,6 +31,14 @@ class DirectionMap {
                 zoom: 13,
             });
             
+            this.clusterer = new ymaps.Clusterer({
+                preset: 'islands#invertedBlueClusterIcons',
+                groupByCoordinates: false,
+                clusterDisableClickZoom: false,
+                clusterHideIconOnBalloonOpen: false,
+                geoObjectHideIconOnBalloonOpen: false
+            });
+            
             this.objectManager = new ymaps.ObjectManager({
                 clusterize: true,
                 gridSize: 30,
@@ -37,7 +46,6 @@ class DirectionMap {
             });
             
             this.objectManager.clusters.options.set('default#imageWithContent', 'islands#greenClusterIcons');
-            this.map.geoObjects.add(this.objectManager);
             this.initGeoObjects();
         }
         ymaps.ready(init);
@@ -45,13 +53,17 @@ class DirectionMap {
     
     initGeoObjects() {
         this.listItems.forEach((item, idx) => {
-            this.map.geoObjects.add(this.geoObjectTemplate(item, idx))
+            this.geoObjects.push(this.geoObjectTemplate(item, idx))
         })
+        
+        this.clusterer.add(this.geoObjects);
+        this.map.geoObjects.add(this.clusterer);
+        
         if (this.listItems.length > 1) {
-            const bounds = ymaps.geoQuery(this.map.geoObjects).getBounds();
+            const bounds = ymaps.geoQuery(this.geoObjects).getBounds();
             this.map.setBounds(bounds, {checkZoomRange: true, zoomMargin: 30});
         } else if (this.listItems.length === 1) {
-            this.map.setCenter(this.map.geoObjects[0].geometry.getCoordinates(), 13);
+            this.map.setCenter(this.geoObjects[0].geometry.getCoordinates(), 13);
         }
     }
     
