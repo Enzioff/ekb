@@ -125,14 +125,14 @@
     padding: 83px 30px 30px;
     min-height: 206px;
 
-    background-color: var(--card-color);
+    background-color: rgba(var(--text-dark-rgb), .6);
     background-image: url("../assets/images/decor-lines.svg");
     background-repeat: no-repeat;
     background-position: center right;
     background-size: cover;
     border-radius: 0 0 18px 18px;
+    backdrop-filter: blur(5px);
     overflow: hidden;
-
     clip-path: polygon(-10px 54px, 110% 0, 110% 110%, 0% 110%);
 
     @include r($mobile) {

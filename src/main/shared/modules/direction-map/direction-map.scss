@@ -58,6 +58,7 @@
     list-style: decimal;
     list-style-position: inside;
     overflow-y: auto;
+    max-height: 684px;
 
     @include r($mobile) {
       max-height: 244px;

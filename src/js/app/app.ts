@@ -5,6 +5,7 @@ import Header from "./header";
 import Faq from "./faq";
 import Tabs from "./tabs";
 import DirectionMap from "./directionMap";
+import TypedAnimation from "./typed";
 
 class App {
     constructor() {
@@ -20,6 +21,17 @@ class App {
         this.createTabs()
         this.createDirectionMap()
         this.createShowMoreText()
+        this.createTypedAnimation()
+    }
+    
+    createTypedAnimation = () => {
+        const typedEls = document.querySelectorAll(".is-typed")
+        
+        if (!typedEls) return;
+        
+        typedEls.forEach((el: HTMLElement) => {
+            new TypedAnimation(el)
+        })
     }
     
     createDirectionMap = () => {

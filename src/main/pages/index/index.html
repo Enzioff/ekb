@@ -24,20 +24,74 @@
                 <div class="swiper-slide">
                     <section class="section section--intro" style="--background: url('../assets/images/main-bg.jpg')">
                         <video class="video-block" preload="auto" loop autoplay muted playsinline>
-                            <source src="https://300.екатеринбург.рф/local/templates/diez-ekb/assets/video/intro-new-mp4.mp4" type="video/mp4;">
+                            <source
+                                src="https://ekb.tw1.ru/upload/video/VID_20250729_170724_759.mp4"
+                                type="video/mp4;">
                         </video>
+                        <div class="container">
+                            <div class="intro">
+                                <h1 class="title title--light">
+                                    Екатеринбург <br>
+                                    город <span class="intro__accent is-typed"
+                                                data-speed="100"
+                                                data-strings="контрастов, талантов, рока, свободы, идей, смыслов"></span>
+                                </h1>
+                                <a href="#" class="button">Подробнее</a>
+                            </div>
+                        </div>
+                    </section>
                     </section>
                 </div>
             </div>
             <div class="swiper-pagination"></div>
         </div>
     </div>
-    <%= htmlWebpackPlugin.options.widgets.blockCards %>
+    <%= htmlWebpackPlugin.options.widgets.blockAttractions %>
+    <section class="section pb-80">
+        <div class="container">
+            <div class="grid">
+                <div class="grid__item grid__item--4 grid__item-mob--4">
+                    <a href="#" class="article-history">
+                        <picture class="article-history__picture">
+                            <img src="./assets/images/history-2.png" alt="">
+                        </picture>
+                        <div class="article-history__info">
+                            <h3 class="article-history__title">
+                                Где поесть
+                            </h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid__item grid__item--4 grid__item-mob--4">
+                    <a href="#" class="article-history">
+                        <picture class="article-history__picture">
+                            <img src="./assets/images/history-3.png" alt="">
+                        </picture>
+                        <div class="article-history__info">
+                            <h3 class="article-history__title">
+                                Что посмотреть
+                            </h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid__item grid__item--4 grid__item-mob--4">
+                    <a href="#" class="article-history">
+                        <picture class="article-history__picture">
+                            <img src="./assets/images/history-3.png" alt="">
+                        </picture>
+                        <div class="article-history__info">
+                            <h3 class="article-history__title">
+                                Где остановиться
+                            </h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
     <%= htmlWebpackPlugin.options.widgets.blockPoster %>
     <%= htmlWebpackPlugin.options.widgets.blockPromo %>
     <%= htmlWebpackPlugin.options.widgets.blockNews %>
-    <%= htmlWebpackPlugin.options.widgets.blockAttractions %>
-    <%= htmlWebpackPlugin.options.widgets.blockReviews %>
 </main>
 <%= htmlWebpackPlugin.options.widgets.footer %>
 <%= htmlWebpackPlugin.options.widgets.hidden %>
