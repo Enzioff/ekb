@@ -92,6 +92,10 @@ $themes: (
   }
 }
 
+@mixin convertToRgb($key, $value) {
+  --#{$key}-rgb: #{red($value)}, #{green($value)}, #{blue($value)}
+}
+
 @include theme(light);
 
 $r-30: 30px;
